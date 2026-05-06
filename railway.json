@@ -1,0 +1,9 @@
+{
+  "$schema": "https://railway.app/schemas/project.json",
+  "name": "team-task-manager",
+  "build": {
+    "builder": "npm",
+    "buildCommand": "npm run build",
+    "startCommand": "npm run start"
+  }
+}
