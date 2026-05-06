@@ -32,7 +32,10 @@ A full-stack web application for managing team projects and tasks with role-base
    ```bash
    npm run dev
    ```
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Open the single entry link in your browser:
+   ```bash
+   http://localhost:3000
+   ```
 
 ## Environment Variables
 

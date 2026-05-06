@@ -1,10 +1,32 @@
+import Link from 'next/link'
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Welcome to Team Task Manager
-        </p>
+    <main className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+      <div className="max-w-2xl w-full bg-white rounded-3xl shadow-xl p-10 text-center">
+        <h1 className="text-4xl font-bold text-gray-900">Team Task Manager</h1>
+        <p className="mt-4 text-gray-600">One link to start your app and manage projects and tasks.</p>
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          <Link
+            href="/auth/signin"
+            className="rounded-2xl bg-indigo-600 px-5 py-4 text-white font-semibold hover:bg-indigo-700"
+          >
+            Sign In
+          </Link>
+          <Link
+            href="/auth/signup"
+            className="rounded-2xl border border-indigo-600 px-5 py-4 text-indigo-600 font-semibold hover:bg-indigo-50"
+          >
+            Sign Up
+          </Link>
+          <Link
+            href="/dashboard"
+            className="rounded-2xl border border-gray-300 px-5 py-4 text-gray-700 font-semibold hover:bg-gray-100"
+          >
+            Dashboard
+          </Link>
+        </div>
       </div>
     </main>
   )
