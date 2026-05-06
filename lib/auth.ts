@@ -17,26 +17,26 @@ export const authOptions: AuthOptions = {
           return null
         }
 
-        await dbConnect()
-
-        const user = await User.findOne({ email: credentials.email })
-
-        if (!user) {
-          return null
+        // Hardcoded credentials check
+        if (credentials.email === 'rahulgarnepalli@gmail.com' && credentials.password === '1234') {
+          return {
+            id: '1',
+            email: 'rahulgarnepalli@gmail.com',
+            name: 'Rahul Garnepalli',
+            role: 'Admin',
+          }
         }
 
-        const isPasswordValid = await bcrypt.compare(credentials.password, user.password)
-
-        if (!isPasswordValid) {
-          return null
+        if (credentials.email === 'user@user.com' && credentials.password === 'user') {
+          return {
+            id: '2',
+            email: 'user@user.com',
+            name: 'Regular User',
+            role: 'Member',
+          }
         }
 
-        return {
-          id: user._id.toString(),
-          email: user.email,
-          name: user.name,
-          role: user.role,
-        }
+        return null
       }
     })
   ],
